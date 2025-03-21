@@ -52,3 +52,54 @@ export default tseslint.config({
   },
 })
 ```
+
+# ReasonedDefense - AI-Driven Legal Analysis
+
+A React application built with Vite for AI-powered legal analysis.
+
+## Environment Setup
+
+This project uses environment variables for Firebase configuration. To set it up:
+
+1. Copy the `.env.example` file to a new file named `.env`:
+   ```
+   cp .env.example .env
+   ```
+
+2. Fill in your Firebase configuration values in the `.env` file:
+   ```
+   VITE_FIREBASE_API_KEY=your-api-key
+   VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your-project-id
+   VITE_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+   VITE_FIREBASE_APP_ID=your-app-id
+   ```
+
+3. Important: In Vite, environment variables must be prefixed with `VITE_` to be exposed to the client-side code.
+
+4. The `.env` file is not committed to the repository for security reasons.
+
+## Development
+
+```
+npm run dev
+```
+
+## Building for Production
+
+```
+npm run build
+```
+
+## Deploying Functions
+
+```
+firebase deploy --only functions
+```
+
+## Deploying the Web App
+
+```
+firebase deploy --only hosting
+```
